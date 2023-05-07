@@ -13,11 +13,14 @@ const Navbar = () => {
                 <div className='flex justify-between items-center w-full py'>
                       <span className='text-black text-lg w-1/3 text-left'>English</span>
                       <div className='w-1/3 flex justify-center'>
+                          <Link href={'/'}>
                           <Image
                       height={100}
                       width={300}
                       alt='Brand Logo'
                       src={LogoImage} />
+                          </Link>
+                          
                       </div>
                       <div className='w-1/3 flex justify-end'>
                           <div className='flex gap-3 items-center'>
