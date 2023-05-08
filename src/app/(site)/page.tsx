@@ -1,18 +1,11 @@
-"use client"
 
-export default function Home() {
-    
-    const makeApiCall = async () => {
-        await fetch('api/posts', {
-             method: "POST",
-            body: JSON.stringify({ hello: "there" })
-})
-    }
-
-
+export default async function Home() {
+    const res = await fetch('api/createProducts')
+    const data = res.json()
+    console.log(data)
     return (
         <>
-            <button onClick={makeApiCall} >Post</button>
+           Home
         </>
 )
 }
