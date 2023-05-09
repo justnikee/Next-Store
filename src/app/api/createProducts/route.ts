@@ -1,14 +1,18 @@
 import { NextApiRequest, NextApiResponse } from "next"
-import prisma from "../../../../prisma/client"
+import prisma from "../../../../lib/client"
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
-          const data =  await prisma.product.findMany()
-          return res.status(200).json(data)
-}
+export async function POST(req: NextApiRequest, res: NextApiResponse) {
+       const { name, description, price, catagory } = req.body;
+       
+       if (!name || !description || !price || !catagory) {
+            return res.status(418).json({error: "Please Fill all the feilds"}) 
+       }
 
-export async function POST(req: Request) {
-       const body = await req.json()
-       console.log(body)
-
-       return new Response('ok')
+      const newProduct = await prisma.product.create({
+              name,
+              description,
+              price,
+              catagory
+       })
+       res.status(201).json(newProduct)
 }
