@@ -14,13 +14,13 @@ const Clothing =async() => {
         Products.map(product => (
           <div key={product.id}>
 
-            <Image
+            {/* <Image
               src={product.image}
               height={400}
               width={400}
               loading='lazy'
               alt='product image'
-            />
+            /> */}
             <span>{product.name}</span>
             <span>{product.description}</span>
             <span>{product.price}</span>
