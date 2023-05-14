@@ -24,8 +24,11 @@ const Navbar = () => {
                       </div>
                       <div className='w-1/3 flex justify-end'>
                           <div className='flex gap-3 items-center'>
-                      <span className='h-7 w-7 block'>
-                     <svg className='bg-transparent text-black' aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 64 64"><path d="M35 39.84v-2.53c3.3-1.91 6-6.66 6-11.41 0-7.63 0-13.82-9-13.82s-9 6.19-9 13.82c0 4.75 2.7 9.51 6 11.41v2.53c-10.18.85-18 6-18 12.16h42c0-6.19-7.82-11.31-18-12.16z"></path></svg>    
+                <span className='h-7 w-7 block'>
+                  <Link href={'/register'}>
+                                         <svg className='bg-transparent text-black' aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 64 64"><path d="M35 39.84v-2.53c3.3-1.91 6-6.66 6-11.41 0-7.63 0-13.82-9-13.82s-9 6.19-9 13.82c0 4.75 2.7 9.51 6 11.41v2.53c-10.18.85-18 6-18 12.16h42c0-6.19-7.82-11.31-18-12.16z"></path></svg>    
+
+                  </Link>
                       </span> 
                      <span className='h-7 w-7 block' >
                       <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 64 64"><path d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"></path></svg>
@@ -36,7 +39,8 @@ const Navbar = () => {
                   </div>
                       </div>
                 </div> 
-                <div className='flex gap-7 items-center justify-center'>
+          <div className='flex gap-7 items-center justify-center'>
+                          <Link className='text-[12px] uppercase  text-black ' href={'/'}>Home</Link>
                           <Link className='text-[12px] uppercase  text-black ' href={'/collection/new-arrivels'}>New Arrivels</Link>
                           <Link className='text-[12px] uppercase  text-black ' href={'/collection/bags'}>Bags</Link>
                           <Link className='text-[12px] uppercase  text-black ' href={'/collection/clothing'}>Clothing</Link>
