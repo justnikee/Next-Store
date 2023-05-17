@@ -1,19 +1,12 @@
 import React from 'react'
 import prisma from '../../../../lib/client'
 import Image from 'next/image';
-import { FC } from 'react';
-
-interface PageProps {
-  params: {
-      clothingId: string
-    }
-}
 
 
-const page: FC<PageProps> = async ({ params }) => {
-  console.log(params.clothingId)
-  const Products = await prisma.product.findMany();
-  
+
+
+const Clothing = async() => {
+  const Products = await fetch(`http://localhost:3000/api/get`); 
   return (
     <div>
       <h1 className='text-xl text-center my-10 uppercase'>
@@ -42,4 +35,4 @@ const page: FC<PageProps> = async ({ params }) => {
   )
 }
 
-export default page
+export default Clothing
