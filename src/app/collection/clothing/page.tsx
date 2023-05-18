@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 
 
-
 const Clothing = async() => {
-  const Products = await fetch(`http://localhost:3000/api/get`); 
+  const Products = await prisma.product.findMany();
+  
   return (
     <div>
       <h1 className='text-xl text-center my-10 uppercase'>

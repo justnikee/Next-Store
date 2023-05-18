@@ -10,10 +10,10 @@ const Banner = () => {
               alt='banner Image'
               loading='lazy'
               src={banerImage}
-              className='absolute top-0 left-0 w-full h-screen object-contain my-4' 
+              className='object-cover' 
           >    
           </Image>
-          <div>
+          <div className='absolute top-1/2 left-1/2'>
                     <h4>Air Jorden High 1 OG</h4>
                     <h2>You Don’t Need a Cape <br/> to take a flight</h2>
           </div>
