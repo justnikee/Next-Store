@@ -4,33 +4,32 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextApiRequest, res: NextResponse) {
     const data = await prisma.product.findMany()
-        
-    if (req.method == 'GET') {
-        return NextResponse.json(data)
-    }
+
+
+    return NextResponse.json(data)
 }
 
 
-export async function POST(request: Request) {
-    const { name, description,  price ,image}: Partial<Products> = await request.json();
+// export async function POST(request: Request) {
+//     const { name, description,  price ,image}: Partial<Products> = await request.json();
 
-    // if (!name || !description || !price || !image) return NextResponse.json({"message" : "Fields are missing!"});
+//     if (!name || !description || !price || !image) return NextResponse.json({"message" : "Fields are missing!"});
    
 
-    const product = await prisma.product.create({
-        data:
-        {
-            name,
-            description,
-            image,
-            price
-        }
-    })
+//     const product = await prisma.product.create({
+//         data:
+//         {
+//             name,
+//             description,
+//             image,
+//             price
+//         }
+//     })
 
 
     
     
-    return NextResponse.json(product)
+//     return NextResponse.json(product)
 
 
-}
+// }
